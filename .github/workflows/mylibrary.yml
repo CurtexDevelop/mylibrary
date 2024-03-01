@@ -13,6 +13,6 @@ jobs:
           java-version: '21'
           distribution: 'adopt'
       - name: Publish package
-        run: ls
+        run: mvn --batch-mode deploy -f './mylibrary/pom.xml'
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN_WR }}
